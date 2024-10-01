@@ -1,4 +1,4 @@
-                                     Google-Cybersecurity-Professional-Certificate
+                                    Google-Cybersecurity-Professional-Certificate
 
 Google's Cybersecurity Professional is a beginner-friendly cybersecurity certification offered by Coursera. 
 
