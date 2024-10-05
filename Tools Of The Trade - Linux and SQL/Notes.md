@@ -1,169 +1,165 @@
--> Operating Systems : It's the interface between the computer hardware and the user. The operating system, or the OS as it's commonly called, is responsible for making the computer run as efficiently as possible while also making it easy to use.
+# Operating Systems & Linux Basics
 
--> Hardware : Physical components of a computer.
+## Table of Contents
+- [Operating Systems](#operating-systems)
+- [Hardware](#hardware)
+- [Applications & Resource Allocation](#applications--resource-allocation)
+- [Boot Process](#boot-process)
+- [Virtualization](#virtualization)
+- [User Interfaces](#user-interfaces)
+  - [Graphical User Interface (GUI)](#graphical-user-interface-gui)
+  - [Command Line Interface (CLI)](#command-line-interface-cli)
+- [Linux Overview](#linux-overview)
+  - [Components of Linux](#components-of-linux)
+  - [Popular Linux Distros](#popular-linux-distros)
+- [Penetration Testing Tools](#penetration-testing-tools)
+- [Basic Linux Commands](#basic-linux-commands)
+- [File Permissions & Ownership](#file-permissions--ownership)
+- [Databases & SQL](#databases--sql)
 
--> Application : A program that performs a specific task.
+---
 
--> Applications send request to Operating Systems, which is then forwaded to the hardware by the Operating System. Also, the hardware commuicates with the Operating system which is then forwaded to the application by the Operating System.
+## Operating Systems
+An **Operating System (OS)** is the interface between the computer hardware and the user. It manages resources and provides a user-friendly interface.
 
--> When you boot, or turn on, your computer, either a BIOS or UEFI microchip is activated. The Basic Input/Output System (BIOS) is a microchip that contains loading instructions for the computer and is prevalent in older systems. The Unified Extensible Firmware Interface (UEFI) is a microchip that contains loading instructions for the computer and replaces BIOS on more modern systems. Then they perform various loading instructions and at the last they activate the bootloader, which is a software program the boots the operating system.
+- **Examples**: Windows, Linux, macOS.
 
--> Resource Allocation via OS : The OS handles resource and memory management to ensure the limited capacity of the computer system is used where it's needed most. A variety of programs, tasks, and processes are constantly competing for the resources of the central processing unit, or CPU.
+---
 
--> Virtual Machine ; A virtual machine (VM) is a virtual version of a physical computer.
+## Hardware
+**Hardware** refers to the physical components of a computer, like the CPU, RAM, storage devices, etc.
 
--> virtualization : Virtualization is the process of using software to create virtual representations of various physical machines.
+---
 
--> Interface : A user interface is a program that allows a user to control the functions of the operating system.
+## Applications & Resource Allocation
+- **Applications**: Programs that perform specific tasks (e.g., browsers, word processors).
+- **Resource Allocation**: The OS manages resources and memory to ensure optimal performance.
 
--> Graphical User Interface (GUI) : A GUI is a user interface that uses icons on the screen to manage different tasks on the computer. Most operating systems can be used with a graphical user interface. Basic GUI components are - Start menu, Task bar, Desktop with icons and shortcuts.
+---
 
--> Command Line Interface (CLI) : The command-line interface, or CLI, is a text-based user interface that uses commands to interact with the computer. These commands communicate with the operating system and execute tasks like opening programs.
+## Boot Process
+1. **BIOS** (Basic Input/Output System) or **UEFI** (Unified Extensible Firmware Interface) is activated when the computer boots.
+2. It loads the **bootloader**, which starts the OS.
 
--> Linux : An open-source operating system.
+---
 
--> GNU was also an operating system based on UNIX. Stallman shared Torvalds' goal of creating software that was free and open to anyone. After working on GNU for a few years, the missing element for the software was a kernel.
+## Virtualization
+- **Virtual Machine (VM)**: A software-based version of a physical computer.
+- **Virtualization**: The process of creating virtual instances of hardware using software.
 
--> Components of Linux -
+---
 
-User - The user is the person interacting with a computer.
+## User Interfaces
 
-Applications - An application is a program that performs a specific task.
+### Graphical User Interface (GUI)
+A GUI uses icons and visuals to interact with the OS. It includes components like:
+- **Start menu**
+- **Taskbar**
+- **Desktop icons**
 
-Shell - The shell is the command-line interpreter.
+### Command Line Interface (CLI)
+The CLI is a text-based interface that uses commands to interact with the OS. Example of a command:
+```bash
+ls
+```
 
-Filesystem Hierarchy Standard - The Filesystem Hierarchy Standard (FHS) is the component of the Linux OS that organizes data. It specifies the location where data is stored in the operating system.
+---
 
-Kernel - The kernel is the component of the Linux OS that manages processes and memory.
+## Linux Overview
+**Linux** is an open-source operating system. It is based on the UNIX operating system and is known for its security and flexibility.
 
-Hardware - The hardware is the physical components of a computer.
+### Components of Linux
+- **User**: The person interacting with the computer.
+- **Applications**: Programs that perform specific tasks.
+- **Shell**: The command-line interpreter.
+- **Filesystem Hierarchy Standard (FHS)**: Organizes data on the OS.
+- **Kernel**: Manages processes and memory.
+- **Hardware**: Physical components of a computer.
 
--> Different Distros of Linux - 
+---
 
-1. Red Hat Enterprise Linux (CentOS)
-2. Slackware (SUSE)
-3. Debian (Ubuntu and Kali Linux)
+### Popular Linux Distros
+1. **Red Hat Enterprise Linux (RHEL)** (e.g., CentOS)
+2. **Slackware** (e.g., SUSE)
+3. **Debian** (e.g., Ubuntu, Kali Linux)
 
--> Penetration Testing :  A penetration test is a simulated attack that helps identify vulnerabilities in systems, networks, websites, applications, and processes.
+---
 
-E.g. -  Metasploit can be used to look for and exploit vulnerabilities on machines.
+## Penetration Testing Tools
+- **Metasploit**: For discovering and exploiting vulnerabilities.
+- **Burp Suite**: For testing web application security.
+- **John the Ripper**: For password cracking.
+- **tcpdump, Wireshark, autopsy**: Digital forensic tools available in Kali Linux.
 
-Burp Suite is another tool that helps to test for weaknesses in web applications.
+---
 
-John the Ripper is a tool used to guess passwords.
+## Basic Linux Commands
 
--> Digital Forensic Tool in Kali - tcpdump, Wireshark, autopsy, etc.
+```bash
+# Display current working directory
+pwd
 
--> A package is a piece of software that can be combined with other packages to form an application. Some packages may be large enough to form applications on their own.
+# List files and directories
+ls
 
--> A package manager is a tool that helps users install, manage, and remove packages or applications. Linux uses multiple package managers.
+# Change directories
+cd <directory_name>
 
--> Shell - The shell is the command-line interpreter. That means it helps you communicate with the operating system through the command line.
+# Search for a string in a file
+grep "<search_string>" <filename>
 
--> Types of Shell - 
+# Create a new directory
+mkdir <directory_name>
 
-1. Bourne-Again Shell (bash)
+# Create a new file
+touch <filename>
+```
 
-2. C Shell (csh)
+---
 
-3. Korn Shell (ksh)
+## File Permissions & Ownership
+In Linux, files and directories have permissions assigned to users and groups.
 
-4. Enhanced C shell (tcsh)
+### Types of File Permissions
+- **Read (r)**
+- **Write (w)**
+- **Execute (x)**
 
-5. Z Shell (zsh)
+### Types of Ownership
+- **User (u)**
+- **Group (g)**
+- **Other (o)**
 
--> Standard Input - Information received by the OS via the command line. String data is the input entered by the user.
+Example of changing permissions using `chmod`:
+```bash
+# Add execute permissions for user on access.txt
+chmod u+x access.txt
+```
 
--> Standard Output - Information returned by the OS through the Shell.
+### Example File Permissions Table
+| Permission | User (u) | Group (g) | Other (o) |
+|------------|----------|-----------|-----------|
+| Read       | ✔        | ✔         | ✔         |
+| Write      | ✔        | ❌        | ❌         |
+| Execute    | ✔        | ❌        | ❌         |
 
--> Standard Error - Error messages returned by the Os  through the shell.
+---
 
--> Security Analysts - 
-i. Work with server logs
-ii. Navigate, manage, and analyze files remotely
-iii. Verify and configure users and group access
-iv. Give authorization and set file permissions
+## Databases & SQL
 
--> Command - An instruction given to the computer to perform a specific task.
+- **Database**: Organized collection of data.
+- **Relational Database**: A database structured with tables that relate to one another.
+- **Primary Key**: A unique identifier for a row in a table.
+- **Foreign Key**: A primary key in another table that connects the tables.
 
--> Argument - Specific information needed by a command.
+---
 
--> Filesystem Hierarchy Standard (FHS) - The component of the Linux OS that organizes data.
+## Images for Reference
 
+### Linux Directory Structure
 ![Linux Directory Structure](Resources/Linux-tree.jpg)
 
--> Root - The highest-level directory in Linux.
-
--> Basic commands in Linux - 
-
-1. pwd - Prints the current working directory.
-2. ls - Displays the names of files and directories in the current working directory.
-3. cd - Navigates between directories.
-4. grep - Searches a specified file ands returns the lines in the file containing the specified string.
-5. | (piping) - Sends the standard output of one command as input to another command for further processing.
-6. mkdir - Makes a new director.
-7. rmdir - Removes a directory.
-8. touch - Creates a new file.
-9. mv - Moves a file or a directory into a new location.
-10. cp - Copies a file or a directory into a new location.
-
--> File permissions and ownership - 
-
-Types of File permissions - 
-i. read (r)
-ii. write (w) 
-iii. execute (x)
-
-Types of owners - 
-i. User (u)
-ii. Group (g)
-ii. Other (o)
-
+### File Permission in Linux
 ![File Permission In Linux](Resources/File-Permissions-Linux.png)
 
-
--> Options - Options modify the behaviour of Linux commands.
-For e.g. - 
-
-1. ls -l, here -l is an option which displays permissions to files and directories.
-
-2. Hidden files can be displayed using the -a option.
-
--> Changing permissions for users - 
-
-i. chmod - Changes permissions on files and directories.
-
-e.g. chmod u+x access.txt (Adds execute permissions for user)
-
--> Problem of logging in as root - 
-
-1. Security Risks
-2. Irreversible Mistakes
-3. Accountability
-
--> sudo - Temporarily grants elevated permissions to specific users.
--> useradd - Adds a user to the system.
--> userdel - Deletes a user from the system.
-
--> man - Displays information on other commands and how they work.
-
--> whatis - Displays a description of a command on a single line.
-
--> apropos - Searches the manual pages for a specific string.
-
-
--> Databases and SQl - 
-
--> Database - An organized collection of information or data.
-
--> Relational Database - A structured database containing tables that are related to each other.
-
--> Primary key - A column where every row has a unique entry.`
-
--> Foreign key - A column in a table that is a primary key in another table.
-
--> SQL - Structured Query Language. A programming language used to create, interact with, and request information from a database.
-
--> Query - A request for data froma  database table or a combination of tables.
-
--> Log - A record of events that occur within an organization's systems.
+---
