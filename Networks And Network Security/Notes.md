@@ -1,270 +1,229 @@
-# **Table of Contents**
+-> Data Packet : A data packet is a basic unit of information which travels from one device to another device in the network.
+   
+Data Packet has 3 parts : Header(Sender IP Address, Dest. MAC Address, Protocol), Body(Content) And Footer(Receiving Device Information)...
 
-1. [Data Packet](#data-packet)  
-2. [Bandwidth](#bandwidth)  
-3. [TCP (Transmission Control Protocol)](#tcp)  
-4. [IP (Internet Protocol)](#ip)  
-5. [Port](#port)  
-6. [TCP/IP Model](#tcpip-model)  
-   - [Layers of TCP/IP Model](#layers-of-tcpip-model)  
-7. [TCP Vs OSI Model](#tcp-vs-osi-model)  
-8. [IP Address](#ip-address)  
-   - [Types of IP Addresses](#types-of-ip-addresses)  
-9. [MAC Address](#mac-address)  
-10. [Network Protocols](#network-protocols)  
-    - [Common Protocols](#common-protocols)  
-11. [Wireless Protocols](#wireless-protocols)  
-12. [Firewall](#firewall)  
-13. [Stateful vs Stateless Firewalls](#stateful-vs-stateless-firewalls)  
-14. [NGFWs (Next-Generation Firewalls)](#ngfws-next-generation-firewalls)  
-15. [VPN (Virtual Private Network)](#vpn)  
-    - [Encapsulation](#encapsulation)  
-16. [Security Zone](#security-zone)  
-17. [Subnetting](#subnetting)  
-18. [Proxy Servers](#proxy-servers)  
-    - [Types of Proxy Servers](#types-of-proxy-servers)  
-19. [Common Network Intrusion Attacks](#common-network-intrusion-attacks)  
-    - [Types of DoS Attacks](#types-of-dos-attacks)  
-20. [Network Protocol Analyzer](#network-protocol-analyzer)  
-21. [Botnets](#botnets)  
-22. [Packet Sniffing](#packet-sniffing)  
-23. [IP Spoofing](#ip-spoofing)  
-24. [Security Hardening](#security-hardening)  
-    - [OS Hardening Techniques](#os-hardening-techniques)  
-25. [Virtual Machines (VMs)](#virtual-machines-vms)  
-26. [Sandbox Environments](#sandbox-environments)  
-27. [Network Security Hardening Techniques](#network-security-hardening-techniques)  
-28. [SIEM Tool](#siem-tool)  
-29. [IDS (Intrusion Detection System)](#ids)  
-30. [IPS (Intrusion Prevention System)](#ips)  
+-> Bandwidth : The amount of data a device receives every second.
 
----
+-> TCP : Transmission Control Protocol is an internet communication protocol that allows two devices to form a connection and stream data.
 
-### **Data Packet**
-A data packet is a basic unit of information that travels from one device to another in the network.
+-> IP : Internet Protocol, is a set of standards used for routing and addressing packets as they travel between devices on a network.
 
-**Parts of a Data Packet**:
-- **Header**: Sender IP Address, Destination MAC Address, Protocol  
-- **Body**: Content  
-- **Footer**: Receiving Device Information  
+-> Port : A software-based location that organizes the sending and receiving of data between devices on a network.
+Ports divide network traffic into segments. The receiving device knows the priority based on these segments.
 
----
+Port 25 - Email
+Port 443 - HTTPS
+Port 20 - Large File Transfers
 
-### **Bandwidth**
-The amount of data a device receives every second.
+-> TCP/IP Model : A framework used to visualize how data is organized and transmitted across the network.
 
----
+Layers of TCP/IP Model :
 
-### **TCP (Transmission Control Protocol)**
-TCP is an internet communication protocol that allows two devices to form a connection and stream data.
+1. Network Access Layer - Deals with creation of data packets and their transmission across a network,including hardware devices such as switches.
 
----
+2. Internet Layer - Internet layer is where IP addresses are attached to data packets to indicate the location of the sender and the receiver. Also, it focuses on how the networks connect to each other.
 
-### **IP (Internet Protocol)**
-IP is a set of standards used for routing and addressing packets as they travel between devices on a network.
+3. Transport Layer - Includes protocols to control the flow of traffic over a network. These protocols permit or deny communication with other devices and include the status of the connection. Also includes Error Control.
 
----
+4. Application Layer - Protocols determine how data packets will interact with the receiving device. Functions such as file transfers, E-mail services are present in this layer.
 
-### **Port**
-A software-based location that organizes the sending and receiving of data between devices on a network.  
-**Common Ports**:  
-- **Port 25**: Email  
-- **Port 443**: HTTPS  
-- **Port 20**: Large File Transfers  
-
----
-
-### **TCP/IP Model**
-The TCP/IP model is a framework used to visualize how data is organized and transmitted across the network.
-
-#### **Layers of TCP/IP Model**:
-1. **Network Access Layer**: Handles the creation of data packets and their transmission across a network, including hardware devices like switches.
-2. **Internet Layer**: Attaches IP addresses to data packets, indicating the sender's and receiver's locations, and focuses on inter-network connectivity.
-3. **Transport Layer**: Controls traffic flow over the network, manages communication permissions, and includes error control mechanisms.
-4. **Application Layer**: Defines how data packets interact with the receiving device, with protocols for tasks like file transfers and email services.
-
----
-
-### **TCP Vs OSI Model**
+-> TCP Vs OSI Model :
 ![TCP Vs OSI Model](Resources/TCPVsOSI.png)
 
----
+-> IP Address : A unique string of character that identifies the location of a device on the Internet.
 
-### **IP Address**
-An IP address is a unique string of characters that identifies the location of a device on the Internet.
+Two types :
 
-#### **Types of IP Addresses**:
-1. **IPv4**: Written as 1, 2, 3, or 4 digit numbers separated by decimal points. When IPv4 addresses became scarce, IPv6 was introduced. ![IPv4](Resources/IPv4.png)
-2. **IPv6**: An IPv6 address contains 32 characters, allowing for more devices to be connected to the internet. ![IPv6](Resources/IPv6.png)
+1. IPv4 - Written as 1,2,3 or 4 digits numbers seperated by a decimal point. When IPv4 addresses got all used up, IPv6 was invented. ![IPv4](Resources/IPv4.png)
 
-**IP Addresses can be**:  
-- **Public**: Assigned by ISPs and used for internet-facing communications.  
-- **Private**: Only visible within a local network and used for internal device communication.
+2. IPv6 - Pv6 addresses are made up of 32 characters. The length of the IPv6 address will allow for more devices to be connected to the internet without running out of addresses as quickly as IPv4.![IPv6](Resources/IPv6.png)
 
----
+IP Addresses can be either :
 
-### **MAC Address**
-A unique alphanumeric identifier assigned to each physical device on a network.  
-A switch reads the MAC address of the destination device and maps it to a port, storing this information in a MAC address table.
+1. Public -  Your internet service provider assigns a public IP address that is connected to your geographic location. When network communications goes out from your device on the internet, they all have the same public-facing address.
 
----
+2. Private - Private IP addresses are only seen by other devices on the same local network. This means that all the devices on your home network can communicate with each other using unique IP addresses that the rest of the internet can't see.
 
-### **Network Protocols**
-A set of rules used by devices to describe the structure and order of data delivery.
+-> MAC Address : A unique alphanumeric identifier that is assigned to each physical device on a network.
 
-#### **Common Protocols**:
-- **TCP**: Forms connections and streams data.
-- **ARP**: Resolves MAC addresses of the next router or device in the path.
-- **HTTPS**: Provides secure communication between clients and web servers.
-- **DNS**: Translates domain names into IP addresses.
-- **SNMP**: Used for managing network devices.
-- **ICMP**: Reports data transmission errors.
-- **UDP**: A connectionless protocol useful for fast transmissions.
+When a switch receives a data packet, it reads the MAC address of the destination device and maps it to a port. It then keeps this information in a MAC address table.
 
----
+-> Network Protocols : A set of rules used by two or more devices on a network to describe the order of delivery and the structurte of the data.
 
-### **Wireless Protocols**
-- **IEEE 802.11 (WiFi)**: Standards defining wireless LAN communication.
-- **WPA (WiFi Protected Access)**: A wireless security protocol for internet connections.
-- **WEP (Wired Equivalent Privacy)**: Provides privacy on wireless networks similar to wired networks.
+TCP (Transmission Control Protocol) : Is an internet communication protocol that allows two devices to form a connection and stream data.
 
----
+ARP (Address Resolution Protocol) : A network protocol used to determine the MAC address of the next router or device in path.
 
-### **Firewall**
-A network security device that monitors traffic to and from your network.
+HTTPS (Hypertext transfer Protocol Secure) : A network protocol that provides a secure method of communication between clients and website servers.
 
-#### **Port Filtering**:
-Blocks or allows specific port numbers to limit unwanted communication.
+DNS (Domain Name System) : A network protocol that translates internet domain names into IP addresses.
 
----
+SNMP (Simple Network Management Protocol) : Is a network protocol used for monitoring and managing devices on a network. SNMP can reset a password on a network device or change its baseline configuration.
 
-### **Stateful vs Stateless Firewalls**
-- **Stateful**: Tracks information passing through it and proactively filters out threats.
-- **Stateless**: Operates based on predefined rules and does not track data packets.
+ICMP (Internet Control Message Protocol) : Is an internet protocol used by devices to tell each other about data transmission errors across the network. ICMP is used by a receiving device to send a report to the sending device about the data transmission.
 
----
+UDP (User Datagram Protocol) :  Is a connectionless protocol that does not establish a connection between devices before a transmission. This makes it less reliable than TCP. But it also means that it works well for transmissions that need to get to their destination quickly.
 
-### **NGFWs (Next Generation Firewalls)**
-- Deep packet inspection  
-- Intrusion protection  
-- Threat intelligence  
+-> Wireless Protocol :
 
----
+IEEE 802.11 (WiFi) - A set of standards that define communication for wireless LANs.
 
-### **VPN (Virtual Private Network)**
-A VPN hides your public IP address and encrypts your data, keeping it private while using public networks like the Internet.
+WPA (WiFi Protected Access) - A wireless security protocol for devices to connect to the internet.
 
-#### **Encapsulation**:
-A VPN process that wraps sensitive data inside other data packets for protection.
+WEP (Wired Equivalent Privacy) - A wireless security protocol designed to provide users with the same level of privacy on wireless network connections as they have on wired network connections.
 
----
+-> Firewall : A network security device that monitors traffic to and from your network.
 
-### **Security Zone**
-A network segment that separates internal networks from the internet.
+Port Filtering : A firewall function that blocks or allows certain port numbers to limit unwanted communication.
 
-#### **Types of Security Zones**:
-1. **Uncontrolled Zone**: External networks beyond the organization's control.  
-2. **Controlled Zone**: A subnet that protects the internal network, including:  
-   - DMZ  
-   - Internal Network  
-   - Restricted Zone  
+Two Types - Hardware Firewall and Software Firewall.
 
----
+-> Stateful : A class of firewall that keeps track of information passing through it and proactively filters out threats.
 
-### **Subnetting**
-The division of a network into smaller logical groups, known as subnets, that help organize devices within a larger network.
+-> Stateless : A class of firewall that operates based on predefined rules and does not keep track of information from data packets. A stateless firewall only acts according to preconfigured rules set by the firewall administrator.
 
----
+-> NGFWs (Next Generation Firewalls) : 
 
-### **Proxy Servers**
-A server that fulfills client requests by forwarding them to other servers.
+1. Deep packet inspection
+2. Intrusion protection
+3. Threat Interlligence
 
-#### **Types of Proxy Servers**:
-- **Forward Proxy Server**: Controls and restricts internet access.
-- **Reverse Proxy Server**: Controls internet access to internal servers.
+-> VPNs (Virtual Private Networks) : A network security service that changes your public IP address and hides your virtual location so that you keep your data private when you are using a public network like the internet.
+They also encrypt your data.
 
----
+-> Encapsulation : A process performed by a VPN service that protects your data by wrapping sensitive data in other data packets.
 
-### **Common Network Intrusion Attacks**
-- **DoS (Denial of Service) Attack**: Floods a network with traffic to disable it.
-- **DDoS (Distributed Denial of Service) Attack**: A DoS attack using multiple sources to flood a target.
+-> Security Zone : A segment of a network that protects the internal network from the internet.
 
-#### **Types of DoS Attacks**:
-1. **SYN Flood Attack**: Overwhelms a server with TCP connection requests.
-2. **ICMP Flood Attack**: Floods a server with ICMP packets.
-3. **Ping of Death Attack**: Sends oversized ICMP packets to crash a target system.
+Two types of security zones - 
 
----
+1. Uncontrolled Zone - Any network outside the organization's control.
 
-### **Network Protocol Analyzer**
-A tool used to capture and analyze data traffic within a network (e.g., Wireshark, tcpdump).
+2. Controlled Zone - A subnet that protects the internal network from the uncontrolled zone.
 
----
+Types of controlled zone - 
 
-### **Botnets**
-A collection of malware-infected computers under a single attacker's control, often used to carry out DDoS attacks.
+a. DMZ (Demilitarized Zone)
+b. Internal Network
+c. Restricted Zone
 
----
+-> Subnetting : Subnetting is the subdivision of a network into logical groups called subnets. It works like a network inside a network. Subnetting divides up a network address range into smaller subnets within the network. These smaller subnets form based on the IP addresses and network mask of the devices on the network.
 
-### **Packet Sniffing**
-The process of observing data as it moves across a network.
+-> Proxy Servers : A server that fulfills the request of a client by forwarding them on to other servers.
 
-- **Passive Packet Sniffing**: Reading data in transit.
-- **Active Packet Sniffing**: Manipulating data in transit.
+-> Forward proxy server : Regulates and restricts a person's access to the internet.
 
----
+-> Reverse proxy server : Regulates and restricts the internet's access to an internal server.
 
-### **IP Spoofing**
-An attack where the source IP address is altered to impersonate an authorized system and gain access to a network.
+-> Common network intrusion attacks :
 
----
+1. Malware
+2. Spoofing
+3. Packet Sniffing & Spoofing
+4. Packet Flooding
 
-### **Security Hardening**
-Strengthening a system to reduce vulnerabilities and the attack surface.
+-> DoS (Denial of service) Attack : An attack that targets a network or server and floods it with network traffic.
 
-#### **OS Hardening Techniques**:
-1. Patch Updates  
-2. Baseline Configuration  
-3. Strong Password Policies  
-4. Multi-factor Authentication (MFA)  
-5. Hardware and Software Disposal  
+-> DDoS (Distributed denial of service) Attack : A type of DoS attack that uses multiple devices or services in different locations to flood the target network with unwanted traffic.
 
----
+-> A network-level Denial of Service attacks targets Network bandwidth.
 
-### **Virtual Machines (VMs)**
-Software versions of physical computers that provide secure, isolated environments to run code and test malware.
+-> 3 Common Network Level DoS Attacks :
 
----
+1. SYN (synchronize) flood attack - A type of DoS attack that simulates a TCP connection and floods a server with SYN packets.
 
-### **Sandbox Environments**
-A secure testing environment for executing software or simulating attacks.
+2. ICMP (Internet Control Mesage Protocol) flood attack - A type of DoS attack performed by an attacker repeatedly sending ICMP packets to a network server.
 
----
+3. Ping of death attack - A type of DoS attack caused when a hacker pings a system by sending it an oversized ICMP packet that is bigger than 64 KB.
 
-### **Network Security Hardening Techniques**
-1. Port Filtering  
-2. Network Access Privileges  
-3. Encryption Standards  
+-> A network protocol analyzer, sometimes called a packet sniffer or a packet analyzer, is a tool designed to capture and analyze data traffic within a network.
+Some of them are : SolarWinds NetFlow Traffic Analyzer, Wireshark, tcpdump (CLI).
 
-Regularly performed tasks:  
-- Firewall
+-> Botnets :  A botnet is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder." Each computer in the botnet can be remotely controlled to send a data packet to a target system. In a botnet attack, cyber criminals instruct all the bots on the botnet to send data packets to the target system at the same time, resulting in a DDoS attack.
 
- Configuration  
-- Anti-virus Software Management  
+-> Packet Sniffing : Packet sniffing is the practice of using software tools to observe data as it moves across a network.
 
----
+1. Passive packet sniffing : A type of attack where data packets are read in transit.
 
-### **SIEM Tool**
-Security Information and Event Management tools monitor an organization's security status and alert analysts to potential threats.
+2. Active packet sniffing : A type of attack where data packets are manipulated in transit.
 
----
+-> IP Spoofing : A network attack performed when an attacker
+changes the source IP of a data packet to impersonate an authorized system and gain access to a network.
 
-### **IDS (Intrusion Detection System)**
-Monitors network traffic for suspicious activity.
+Common IP Spoofing attacks - 
 
----
+1. On-path attacks : An attack where a malicious actor places themselves in the middle of an authorized connection and intercepts or alters the data in transit.
 
-### **IPS (Intrusion Prevention System)**
-Actively intercepts and mitigates threats to prevent harm to a network.
+2. Replay attacks : A network attack performed when a amlicious actor intercepts a data packet in transit and delays ir or repeats it at another time.
 
----
+3. Smurf attacks : A network attack performed when an attacker sniffs an authorized user's IP address and floods it with packets.
+
+-> Security Hardening : The process of strengthening a system to reduce its vulnerability and attack surface.
+
+-> Attack surface : All the potential vulnerabilities that a threat actor could exploit.
+
+-> Security hardening is conducted on - 
+
+1. Hardware
+2. Operating Systems
+3. Applications
+4. Computer Networks
+5. Databases
+
+-> Penetration test : A simulated attack that helps identify vulnerabilities in systems, networks, websites, applications, and processes.
+
+-> OS (Operating System) : The interface between computer hardware and the user.
+
+-> OS (Operating System) Hardening Techniques: 
+
+1. Patch update : A software and operating system update that addresses security vulnerabilities within a program or output.
+
+2. Baseline configuration (Baseline image) : A documented set of specifications within a system that is used as a basis for future builds, releases, and updates.
+
+3. Hardware and Software Disposal : This ensures that all old hardware is properly wiped and disposed of. It's also a good idea to delete any unused software applications since some popular programming languages have known vulnerabilities. Removing unused software makes sure that there aren't any unnecessary vulnerabilities connected with the programs that the software uses.
+
+4. Implementing Strong Password Policy : Strong password policies require that passwords follow specific rules.
+
+5. MFA (Multi-factor authentication) : A security measure which requires a user to verify the identity in two or more ways to access a system or network.
+
+-> VMs (Virtual Machines) : Virtual machines (VMs) are software versions of physical computers. VMs provide an additional layer of security for an organization because they can be used to run code in an isolated environment, preventing malicious code from affecting the rest of the computer or system. VMs can also be deleted and replaced by a pristine image after testing malware. 
+
+-> Sandbox Environments : A sandbox is a type of testing environment that allows you to execute software or programs separate from your network. They are commonly used for testing patches, identifying and addressing bugs, or detecting cybersecurity vulnerabilities. Sandboxes can also be used to evaluate suspicious software, evaluate files containing malicious code, and simulate attack scenarios.
+
+-> Network Security Hardening Techniques :
+
+1. Port filtering
+2. Network access privilege
+3. Encryption
+
+Regularly performed tasks :
+
+a. Firewall rules maintenance
+b. Network log analysis : The process of examining network logs to identify events of interest.
+c. Patch updates
+d. Server backups
+
+-> SIEM (System Information and Event Management) Tool : An Application that collects and analyzes log data to monitor critical activities in an organization.
+
+Singularly performed tasks : 
+
+a. Port filtering : A firewall function that blocks or allows certain port numbers to limit unwanted communication.
+b. Network segmentation 
+c. Encryption Standards
+
+-> IDS (Intrusion Detection System) : An intrusion detection system (IDS) is an application that monitors system activity and alerts on possible intrusions. An IDS alerts administrators based on the signature of malicious traffic.
+
+-> IPS (Intrusion Prevention System) : An intrusion prevention system (IPS) is an application that monitors system activity for intrusive activity and takes action to stop the activity. It offers even more protection than an IDS because it actively stops anomalies when they are detected, unlike the IDS that simply reports the anomaly to a network administrator.
+
+-> Cloud Network : A collection of servers or computers that stores resources and data in remote data centres that can be accessed via the internet.
+
+-> Cloud Security Hardening Techniques : 
+
+1. IAM (Identity access management) : It is a collection of processes and technologies that helps organizations manage digital identities in their environment. This service also authorizes how users can leverage different cloud resources.
+
+2. Hypervisors : A hypervisor abstracts the host’s hardware from the operating software environment. There are two types of hypervisors.
+
+3. Baselining : Baselining for cloud networks and operations cover how the cloud environment is configured and set up. A baseline is a fixed reference point.
+
+4. Cryptography : Cryptography can be applied to secure data that is processed and stored in a cloud environment. 
+
